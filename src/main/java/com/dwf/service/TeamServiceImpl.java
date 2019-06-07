@@ -12,28 +12,28 @@ import com.dwf.model.Team;
 @Service
 @Transactional
 public class TeamServiceImpl implements TeamService {
-	
-	@Autowired
-	private TeamDAO teamDAO;
 
-	public void addTeam(Team team) {
-		teamDAO.addTeam(team);		
-	}
+    @Autowired
+    private TeamDAO teamDAO;
 
-	public void updateTeam(Team team) {
-		teamDAO.updateTeam(team);
-	}
+    public void addTeam(Team team) {
+	teamDAO.addTeam(team);
+    }
 
-	public Team getTeam(int id) {
-		return teamDAO.getTeam(id);
-	}
+    public void updateTeam(Team team) {
+	teamDAO.updateTeam(team);
+    }
 
-	public void deleteTeam(int id) {
-		teamDAO.deleteTeam(id);
-	}
+    public Team getTeam(int id) {
+	return teamDAO.getTeam(id);
+    }
 
-	public List<Team> getTeams() {
-		return teamDAO.getTeams();
-	}
+    public void deleteTeam(int id) {
+	teamDAO.deleteTeam(id);
+    }
+
+    public List<Team> getTeams() {
+	return teamDAO.getTeams();
+    }
 
 }

@@ -14,35 +14,35 @@ import com.dwf.model.Societe;
 @Service
 @Transactional
 public class CommandeServiceImpl implements CommandeService {
-	
-	@Autowired
-	private CommandeDAO commandeDAO;
-	
-	@Autowired
-	private SocieteDAO societeDAO;
 
-	public void addCommande(Commande commande) {
-		Societe societe = societeDAO.getSociete(commande.getSociete().getNomSociete());
-		commande.setSociete(societe);
-		commandeDAO.addCommande(commande);		
-	}
+    @Autowired
+    private CommandeDAO commandeDAO;
 
-	public void updateCommande(Commande commande) {
-		Societe societe = societeDAO.getSociete(commande.getSociete().getNomSociete());
-		commande.setSociete(societe);
-		commandeDAO.updateCommande(commande);
-	}
+    @Autowired
+    private SocieteDAO societeDAO;
 
-	public Commande getCommande(Integer id) {
-		return commandeDAO.getCommande(id);
-	}
+    public void addCommande(Commande commande) {
+	Societe societe = societeDAO.getSociete(commande.getSociete().getNomSociete());
+	commande.setSociete(societe);
+	commandeDAO.addCommande(commande);
+    }
 
-	public void deleteCommande(Integer id) {
-		commandeDAO.deleteCommande(id);
-	}
+    public void updateCommande(Commande commande) {
+	Societe societe = societeDAO.getSociete(commande.getSociete().getNomSociete());
+	commande.setSociete(societe);
+	commandeDAO.updateCommande(commande);
+    }
 
-	public List<Commande> getCommandes() {
-		return commandeDAO.getCommandes();
-	}
+    public Commande getCommande(Integer id) {
+	return commandeDAO.getCommande(id);
+    }
+
+    public void deleteCommande(Integer id) {
+	commandeDAO.deleteCommande(id);
+    }
+
+    public List<Commande> getCommandes() {
+	return commandeDAO.getCommandes();
+    }
 
 }

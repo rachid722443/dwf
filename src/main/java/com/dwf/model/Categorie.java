@@ -14,8 +14,8 @@ import javax.persistence.Table;
 @Table(name="categorie")
 public class Categorie {
 
-	@Id
-	@GeneratedValue
+    @Id
+    @GeneratedValue
     private Integer idCategorie;
     
     private String nomCategorie;

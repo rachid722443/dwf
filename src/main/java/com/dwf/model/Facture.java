@@ -13,9 +13,9 @@ import javax.persistence.Table;
 @Table(name="facture")
 public class Facture {
     
-	@Id
-	@GeneratedValue
-	private Integer idFacture;
+    @Id
+    @GeneratedValue
+    private Integer idFacture;
     
     private String nomFacture;
     
