@@ -22,7 +22,7 @@
 
                     <form:form method="POST" commandName="societe" action="${pageContext.request.contextPath}/societe/edit/${societe.idSociete}.html" class="form-horizontal form-label-left">
 
-                      <span class="section">Information</span>
+                      <span class="section">Information de la société n° </span> 
 
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nom : <span class="required">*</span>

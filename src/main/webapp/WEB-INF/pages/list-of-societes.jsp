@@ -46,8 +46,8 @@
 							<td>${societe.email}</td>
 							<td>${societe.telephone}</td>
 							<td>
-							<a type="button" class="btn btn-round btn-info" href="${pageContext.request.contextPath}/societe/edit/${societe.idSociete}.html">Modifier</a><br/>
-							<a type="button" class="btn btn-round btn-danger"  href="${pageContext.request.contextPath}/societe/delete/${societe.idSociete}.html">Supprimer</a><br/>
+							<a type="button" class="btn btn-round btn-info" href="${pageContext.request.contextPath}/societe/edit/${societe.idSociete}.html">Modifier</a>
+							<a type="button" class="btn btn-round btn-danger"  href="${pageContext.request.contextPath}/societe/delete/${societe.idSociete}.html">Supprimer</a>
 							</td>
 						</tr>
 						</c:forEach>

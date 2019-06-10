@@ -58,14 +58,11 @@ public class SocieteController {
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
     public ModelAndView edditingSociete(@ModelAttribute Societe societe, @PathVariable Integer id) {
-
 	ModelAndView modelAndView = new ModelAndView("home");
-
+	societe.setIdSociete(id);
 	societeService.updateSociete(societe);
-
 	String message = "Societe was successfully edited.";
 	modelAndView.addObject("message", message);
-
 	return modelAndView;
     }
 
