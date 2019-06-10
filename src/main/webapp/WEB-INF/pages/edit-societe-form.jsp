@@ -9,18 +9,18 @@
   	<div class="">
 		<div class="clearfix"></div>			
 		<div class="x_content">
-			<h1>Ajouter une société</h1>
+			<h1>Modifier une société</h1>
 			
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Formulaire</h2>
+                    <h2>Formulaire de modification</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
 
-                    <form:form method="POST" commandName="societe" action="${pageContext.request.contextPath}/societe/add.html" class="form-horizontal form-label-left">
+                    <form:form method="POST" commandName="societe" action="${pageContext.request.contextPath}/societe/edit/${societe.idSociete}.html" class="form-horizontal form-label-left">
 
                       <span class="section">Information</span>
 
@@ -98,7 +98,7 @@
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">
                           <button type="submit" class="btn btn-primary">Annuler</button>
-                          <button id="send" type="submit" class="btn btn-success">Valider</button>
+                          <button id="send" type="submit" class="btn btn-success">Modifier</button>
                         </div>
                       </div>
                     </form:form>

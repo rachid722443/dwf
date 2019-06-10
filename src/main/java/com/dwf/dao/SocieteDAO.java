@@ -6,9 +6,9 @@ import com.dwf.model.Societe;
 
 public interface SocieteDAO {
 
-    public void addSociete(Societe team);
+    public void addSociete(Societe societe);
 
-    public void updateSociete(Societe team);
+    public void updateSociete(Societe societe);
 
     public Societe getSociete(Integer id);
 

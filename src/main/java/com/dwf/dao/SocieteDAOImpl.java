@@ -19,19 +19,27 @@ public class SocieteDAOImpl implements SocieteDAO {
 	return sessionFactory.getCurrentSession();
     }
 
-    public void addSociete(Societe Societe) {
-	getCurrentSession().save(Societe);
+    public void addSociete(Societe societe) {
+	getCurrentSession().save(societe);
     }
 
-    public void updateSociete(Societe Societe) {
-	Societe SocieteToUpdate = getSociete(Societe.getIdSociete());
-	getCurrentSession().update(SocieteToUpdate);
+    public void updateSociete(Societe societe) {
+	Societe societeToUpdate = getSociete(societe.getIdSociete());
+	societeToUpdate.setNomSociete(societe.getNomSociete());
+	societeToUpdate.setSecteurActivite(societe.getSecteurActivite());
+	societeToUpdate.setAdresse(societe.getAdresse());
+	societeToUpdate.setCp(societe.getCp());
+	societeToUpdate.setVille(societe.getVille());
+	societeToUpdate.setPays(societe.getPays());
+	societeToUpdate.setNomClient(societe.getNomClient());
+	societeToUpdate.setFonctionClient(societe.getFonctionClient());
+	getCurrentSession().update(societeToUpdate);
 
     }
 
     public Societe getSociete(Integer id) {
-	Societe Societe = (Societe) getCurrentSession().get(Societe.class, id);
-	return Societe;
+	Societe societe = (Societe) getCurrentSession().get(Societe.class, id);
+	return societe;
     }
 
     public Societe getSociete(String name) {
@@ -40,9 +48,9 @@ public class SocieteDAOImpl implements SocieteDAO {
     }
 
     public void deleteSociete(Integer id) {
-	Societe Societe = getSociete(id);
-	if (Societe != null)
-	    getCurrentSession().delete(Societe);
+	Societe societe = getSociete(id);
+	if (societe != null)
+	    getCurrentSession().delete(societe);
     }
 
     @SuppressWarnings("unchecked")

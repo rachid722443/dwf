@@ -2,18 +2,18 @@ package com.dwf.dao;
 
 import java.util.List;
 
-import com.dwf.model.Team;
+import com.dwf.model.Facture;
 
 public interface FactureDAO {
 
-    public void addTeam(Team team);
+    public void addFacture(Facture facture);
 
-    public void updateTeam(Team team);
+    public void updateFacture(Facture facture);
 
-    public Team getTeam(int id);
+    public Facture getFacture(Integer id);
 
-    public void deleteTeam(int id);
+    public void deleteFacture(Integer id);
 
-    public List<Team> getTeams();
+    public List<Facture> getFactures();
 
 }

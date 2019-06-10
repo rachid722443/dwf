@@ -7,7 +7,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.dwf.model.Team;
+import com.dwf.model.Facture;
 
 @Repository
 public class FactureDAOImpl implements FactureDAO {
@@ -19,32 +19,29 @@ public class FactureDAOImpl implements FactureDAO {
 	return sessionFactory.getCurrentSession();
     }
 
-    public void addTeam(Team team) {
-	getCurrentSession().save(team);
+    public void addFacture(Facture facture) {
+	getCurrentSession().save(facture);
     }
 
-    public void updateTeam(Team team) {
-	Team teamToUpdate = getTeam(team.getId());
-	teamToUpdate.setName(team.getName());
-	teamToUpdate.setRating(team.getRating());
-	getCurrentSession().update(teamToUpdate);
+    public void updateFacture(Facture facture) {
+	getCurrentSession().update(null); //TODO
 
     }
 
-    public Team getTeam(int id) {
-	Team team = (Team) getCurrentSession().get(Team.class, id);
-	return team;
+    public Facture getFacture(Integer id) {
+	Facture facture = (Facture) getCurrentSession().get(Facture.class, id);
+	return facture;
     }
 
-    public void deleteTeam(int id) {
-	Team team = getTeam(id);
-	if (team != null)
-	    getCurrentSession().delete(team);
+    public void deleteFacture(Integer id) {
+	Facture facture = getFacture(id);
+	if (facture != null)
+	    getCurrentSession().delete(facture);
     }
 
     @SuppressWarnings("unchecked")
-    public List<Team> getTeams() {
-	return getCurrentSession().createQuery("from Team").list();
+    public List<Facture> getFactures() {
+	return getCurrentSession().createQuery("from Facture").list();
     }
 
 }
