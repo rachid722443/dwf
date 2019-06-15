@@ -22,8 +22,6 @@
 
                     <form:form method="POST" commandName="societe" action="${pageContext.request.contextPath}/societe/edit/${societe.idSociete}.html" class="form-horizontal form-label-left">
 
-                      <span class="section">Information de la société n° </span> 
-
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nom : <span class="required">*</span>
                         </label>
@@ -97,7 +95,7 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">
-                          <button type="submit" class="btn btn-primary">Annuler</button>
+                          <a><button type="button" onclick="history.go(-1)" class="btn btn-primary">Annuler</button></a>
                           <button id="send" type="submit" class="btn btn-success">Modifier</button>
                         </div>
                       </div>

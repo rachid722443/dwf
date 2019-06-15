@@ -97,7 +97,7 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">
-                          <button type="submit" class="btn btn-primary">Annuler</button>
+                          <a><button type="submit" onclick="history.go(-1)" class="btn btn-primary">Annuler</button></a>
                           <button id="send" type="submit" class="btn btn-success">Valider</button>
                         </div>
                       </div>
